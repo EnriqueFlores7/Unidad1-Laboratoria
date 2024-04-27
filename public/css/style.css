@@ -1,0 +1,93 @@
+/* Establece la tipografía y el color de fondo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Estilos para el contenedor principal */
+.login-container {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Estilización de los títulos */
+h1, h2 {
+    color: #444;
+}
+
+/* Estilos para los párrafos */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para los inputs */
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botones con un aspecto moderno y limpio */
+button {
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 48%;
+}
+
+button:hover {
+    background-color: #4a54e1;
+}
+
+/* Estilos para mostrar mensajes de error */
+#error {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Ajuste de los márgenes para el resultado */
+#resultado {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para el menú de navegación */
+.menu-navegacion {
+    background-color: #333; /* Color de fondo oscuro para el menú */
+    padding: 5px 0; /* Espacio vertical dentro del menú */
+    text-align: center; /* Centra los enlaces dentro del menú */
+}
+
+.menu-navegacion a {
+    color: white; /* Color del texto para los enlaces */
+    padding: 12px 20px; /* Espacio alrededor del texto */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    margin: 0 10px; /* Espacio horizontal entre enlaces */
+    display: inline-block; /* Permite el uso de margin y padding en los enlaces */
+}
+
+.menu-navegacion a:hover, .menu-navegacion a:focus {
+    background-color: #555; /* Cambia el fondo al pasar el ratón o enfocar */
+    color: #fff; /* Mantiene el texto blanco al enfocar o pasar el ratón */
+    border-radius: 4px; /* Bordes redondeados */
+}

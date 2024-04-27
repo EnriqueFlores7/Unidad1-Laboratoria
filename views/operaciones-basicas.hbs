@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones Básicas con Números Complejos</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-navegacion">
+        <a href="index">Cambiar a otra forma</a>
+        <a href="operaciones-basicas">Operaciones Basicas</a>
+    </div>
+
+    <div class="login-container">
+        <h1>Operaciones Basicas</h1>
+        <p style="color: red;">Advertencia: si tiene 5i por favor agréguelo como 0+5i</p>
+
+        <label for="ecua1">Número Complejo 1:</label>
+        <input type="text" id="ecua1" placeholder="Ej. 3+4i">
+        
+        <label for="ecua2">Número Complejo 2:</label>
+        <input type="text" id="ecua2" placeholder="Ej. 2-2i">
+
+        <button onclick="Sumar()">Sumar</button>
+        <button onclick="Restar()">Restar</button>
+        <button onclick="Multiplicacion()">Multiplicar</button>
+        <button onclick="Division()">Dividir</button>
+
+        <p id="error" style="color: red;"></p>
+        <h2>Resultado:</h2>
+        <p id="resultado">Forma de Salida: </p>
+    </div>
+    <script src="js/operaciones-basicas.js"></script>
+</body>
+</html>

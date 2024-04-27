@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Números Complejos</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- Inicio del menú de navegación -->
+<div class="menu-navegacion">
+    <a href="index">Cambiar a otra forma</a>
+    <a href="operaciones-basicas">Operaciones Basicas</a>
+</div>
+<!-- Fin del menú de navegación -->
+
+    <div class="login-container">
+    <h1>Conversor de Números Complejos</h1>
+    <p>Introduce la parte real e imaginaria de un número complejo:</p>
+    <input type="text" id="parte_real" placeholder="Parte real">
+    <input type="text" id="parte_img" placeholder="Parte imaginaria">
+    
+    <button onclick="convertirPolar()">Convertir a Polar</button>
+    <button onclick="convertirExponencial()">Convertir a Exponencial</button>
+    <button onclick="convertirPolarACartesiana()">Polar a Cartesiana</button>
+    <button onclick="convertirExponencialACartesiana()">Exponencial a Cartesiana</button>
+
+    <p id="error" style="color: red;"></p>
+    <h2>Resultado:</h2>
+    <p id="resultado">Forma de Salida: </p>
+    </div>
+    <script src="js/codigo-conversion.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Graficar Puntos Complejos</title>
+    <!-- Inclusión de Plotly.js desde CDN -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        #original-plot, #mapped-plot {
+            width: 600px; 
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inicio del menú de navegación -->
+<div class="menu-navegacion">
+    <a href="index">Cambiar a otra forma</a>
+    <a href="operaciones-basicas">Operaciones Basicas</a>
+</div>
+<!-- Fin del menú de navegación -->
+    <div id="original-plot"></div>
+    <div id="mapped-plot"></div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const points = [
+            { x: 1, y: 2, color: 'red' },
+            { x: -1, y: -1, color: 'blue' },
+            { x: 0.5, y: -0.5, color: 'green' },
+            { x: -1.5, y: 2.5, color: 'purple' }
+        ];
+
+        function mapComplex(z) {
+            // Mapeo: f(z) = z^2
+            return { x: z.x*z.x - z.y*z.y, y: 2*z.x*z.y };
+        }
+
+        const mappedPoints = points.map(p => ({
+            x: mapComplex(p).x,
+            y: mapComplex(p).y,
+            color: p.color
+        }));
+
+        function plotPoints(divId, data) {
+            const traces = data.map(point => ({
+                x: [point.x],
+                y: [point.y],
+                mode: 'markers',
+                marker: {
+                    size: 12,
+                    color: point.color
+                },
+                type: 'scatter'
+            }));
+
+            Plotly.newPlot(divId, traces, {
+                xaxis: { range: [-10, 10] },
+                yaxis: { range: [-10, 10] },
+                title: 'Graficar Puntos Complejos'
+            });
+        }
+
+        plotPoints('original-plot', points);
+        plotPoints('mapped-plot', mappedPoints);
+    });
+    </script>
+</body>
+</html>
